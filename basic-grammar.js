@@ -26,28 +26,48 @@
 // 1 + 3 - 4
 // 2 * 3 / 6
 // let num = 1
-// ++num // インクリメント
+// num += 1 // インクリメント for(;; i++) 
+// num = num - 1
 // 1 > 2 // 論理値が返る
-// 1 === 1
+// 1 === "1" //厳格等価演算子
+// 1 == "1"
+
 
 // 2. 条件分岐
-// const templature = 30
+// const templature = 0
+
 // if (templature > 25) {
 //   console.log("暑い")
 // } else {
 //   console.log("暑くない")
 // }
+// if (条件文) {
+//   条件文が正しい時の処理
+// } else {
+//   条件文が正しくない時の処理
+// }
 
 // 3. 繰り返し
+// console.log("おはよう") 
+// const a = "あ"
+// console.log(a)
+// for (初期化式;条件式;更新式){}
 // for (let i = 0; i < 10;i++) {
-//   console.log(i)
+//   console.log("iihara")
 // }
 
+// const arr = [1,2,3,4,5]
+// for (let i = 0,len = [1,2,3,4,5].length; i < len;i++) {
+//   console.log("heyheyhoo")
+//   console.log(len)
+// }
 // 4. 関数
 // function sum(x, y) {
-//   return x + y
+//   const z = x**2 + y*2 + 1
+//   return z
 // }
-// sum(2,4)
+// sum(3,4)
+
 
 // function sumArray(array) {
 //   const length = array.length
@@ -59,6 +79,7 @@
 // }
 // const testScore = [90, 80, 70, 88, 12]
 // sumArray(testScore)
+// 90 + 80 + 70 +88 + 12
 
 // 5. 配列をランダムにシャッフルしよう
 // 5-1 math()
@@ -66,18 +87,42 @@
 // Math.random() // 0〜1のランダムな数を生成
 
 // 5-2 1〜10をランダムに出力する
-// Math.floor(10 * Math.random()) + 1
+// Math.floor(10 * Math.random()) + 1 
+// for (let i =0; i < 100; i++) {
+//   console.log(Math.floor(10 * Math.random()) + 1)
+// }
 
 // 5-3 
-// const perticipants = ["Ito", "Kubo", "Shion", "Kojima","Sunguk", "Tomoya"]
+// const perticipants = ["Ito", "Kubo", "Shion", "Kojima","Sunguk", "Tomoya", "Koichi", "Yata"]
 // const numberOfPerticipants = perticipants.length
-// const randomIndex = Math.floor(numberOfPerticipants * Math.random()) + 1
+// const randomIndex = Math.floor(numberOfPerticipants * Math.random())
 
+// for (let i = 0; i < perticipants.length; i++) {
+//   const randomIndex = Math.floor(perticipants.length * Math.random());
+//   //問題のコード
+//   [perticipants[i], perticipants[randomIndex]] = [perticipants[randomIndex], perticipants[i]]
+// }
+// console.log(perticipants)
 
+// const perticipants = ["Ito", "Kubo", "Shion", "Kojima","Sunguk", "Tomoya", "Koichi", "Yata"]
+// let shuffledArray = []
+// for (;shuffledArray.length < perticipants.length;) {
+//   const numberOfPerticipants = perticipants.length
+//   const randomIndex = Math.floor(numberOfPerticipants * Math.random())
+//   if (!shuffledArray.includes(perticipants[randomIndex])) {
+//     shuffledArray.push(perticipants[randomIndex]);
+//   }
+// }
+// console.log(shuffledArray)
 
-
-
-
+// while (shuffledArray.length < perticipants.length) {
+//   const numberOfPerticipants = perticipants.length
+//   const randomIndex = Math.floor(numberOfPerticipants * Math.random())
+//   if (!shuffledArray.includes(perticipants[randomIndex])) {
+//     shuffledArray.push(perticipants[randomIndex]);
+//   }
+// }
+// console.log(shuffledArray)
 
 
 
