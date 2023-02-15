@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我々は宇宙人だ</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      .container {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>席替え結果</h1>
+    <p id="result">結果は...</p>
+  </body>
+
+  <script defer>
+    const resultElement = document.getElementById("result");
+
+    const participants = [
+      "Ito",
+      "Kubo",
+      "Shion",
+      "Kojima",
+      "Sunguk",
+      "Tomoya",
+      "Koichi",
+      "Yata",
+    ];
+    let shuffledArray = [];
+    while (shuffledArray.length < participants.length) {
+      const numberOfParticipants = participants.length;
+      const randomIndex = Math.floor(numberOfParticipants * Math.random());
+      if (!shuffledArray.includes(participants[randomIndex])) {
+        shuffledArray.push(participants[randomIndex]);
+      }
+    }
+
+    result.innerHTML = shuffledArray;
+  </script>
+</html>

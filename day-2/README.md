@@ -19,6 +19,7 @@
 {  
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -35,6 +36,18 @@
 ### 1-3. Extensionの設定
 最低限の機能
 - prettier
+- eslint
 - indent-rainbow
 - auto close tag
+- auto rename tag
+- project manager
+
+- color theme
+- material icon theme
+- codesnap
+- IDEA VIM
+
+おふざけ
+- power mode
+
 
