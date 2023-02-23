@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我々は宇宙人だ</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Shuffle Program</h1>
+    <label
+      >Please input elements <strong>separated by commas</strong> that you wanna
+      shuffle</label
+    ><br />
+    <textarea
+      cols="50"
+      rows="5"
+      id="input"
+      placeholder="sasaki, kaneki, amon"
+    ></textarea
+    ><br />
+    <button type="button" onclick="shuffle()">Shuffle</button>
+    <p id="result"></p>
+  </body>
+
+  <script>
+    const resultElement = document.getElementById("result");
+
+    function shuffle() {
+      // ボタンをクリックするごとにinputを再取得
+      const input = document.getElementById("input").value;
+      const inputArray = input.split(","); // カンマで要素を分ける
+      const length = inputArray.length; // 要素の数を取得
+      let resultArray = []; // 結果配列を定義
+
+      // 結果配列の挿入
+      while (resultArray.length < length) {
+        const randomIndex = Math.floor(length * Math.random());
+        const element = inputArray[randomIndex].trim();
+        if (!resultArray.includes(element)) {
+          resultArray.push(element);
+        }
+      }
+      resultElement.innerHTML = resultArray;
+    }
+  </script>
+</html>
